@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
+<script src="./send.js"></script>
     <title>Document</title>
   </head>
 
@@ -19,19 +21,4 @@
       </div>
     </form>
   </body>
-
-  <script type="text/javascript">
-    function SendMessage() {
-      alert("mattermostに通知したよ！");
-    }
-    function getAPI() {
-      // hotpepperのAPIキー
-      const APIkey = "e5a0b8eca3099add";
-      const formID = document.getElementById("API");
-      const shopName = document.getElementById("shopName").value;
-      formID.action = `https://webservice.recruit.co.jp/hotpepper/shop/v1/?key=${APIkey}&keyword=${shopName}&format=json`;
-      alert(formID.action);
-      formID.submit();
-    }
-  </script>
 </html>
